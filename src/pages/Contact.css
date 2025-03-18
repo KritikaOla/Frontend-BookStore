@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap');
+
+.contact-section * {
+  font-family: Nunito, sans-serif;
+  box-sizing: border-box;
+}
+
+.contact-section {
+  margin: 0;
+  padding: 0;
+}
+
+.contact-container {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px auto 50px;
+  max-width: 1000px;
+}
+
+.contact-form {
+  width: 100%;
+  margin: 0;
+}
+
+.contact-form-container {
+  width: auto;
+  padding: 10px;
+  margin: 0 auto;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.contact-cell {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.contact-name {
+  padding-right: 30px;
+}
+
+.contact-input-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.contact-input {
+  width: 100%;
+  background-color: #f8f8f8;
+  height: 60px;
+  padding: 5px 12px;
+  font-size: 16px;
+  border: 1px solid #e5e5e5;
+}
+
+.contact-textarea {
+  width: 100%;
+  height: 140px;
+  background-color: #f8f8f8;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #e5e5e5;
+  margin-bottom: 35px;
+}
+
+.contact-submit-btn {
+  width: 30%;
+  height: 66px;
+  background-color: #5b79d2;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  box-shadow: rgba(244, 152, 146, 0.25) 0px 10px 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .contact-cell,
+  .contact-name {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-form-container {
+    padding: 50px 12px;
+  }
+}
+
+/* Responsive width helpers, if you need them */
+.contact-desk-6 {
+  width: 50%;
+}
+
+.contact-desk-12 {
+  width: 100%;
+}
