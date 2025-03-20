@@ -2,7 +2,7 @@ import React from "react";
 import "../components/ProductCard.css";
 import BookCard from "../components/BookCard";
 import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
+import { CartContext } from "../Store/CartContext";
 import { useNavigate } from "react-router-dom"; // Add this import!
 import { useEffect } from "react";
 

@@ -12,7 +12,7 @@ import Payment from './pages/payment';
 import Result from './pages/Result';
 import Toolbar from '@mui/material/Toolbar';
 import { Routes, Route } from 'react-router-dom';
-import { CartProvider } from './context/CartContext'; // ✅ Import CartProvider
+import { CartProvider } from './Store/CartContext'; // ✅ Import CartProvider
 
 // console.log('Navbar:', Navbar);
 

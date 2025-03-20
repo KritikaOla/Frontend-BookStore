@@ -4,7 +4,7 @@ import "../components/ProductCard.css";
 import BookCard from "../components/BookCard";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
+import { CartContext } from "../Store/CartContext";
 
 // Import images
 import book1 from "../images/manga1.jpg";
