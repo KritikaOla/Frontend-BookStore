@@ -17,10 +17,10 @@ a {
 .product-card {
     width: 280px;
     position: relative;
-    box-shadow: 0 2px 7px #dfdfdf;
-    background: #fafafa;
+    box-shadow: 0 2px 7px #bfb9e6;
+    background: #d8d6ed;
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.9s ease-in-out;
     margin: 20px;
 }
 
@@ -43,7 +43,7 @@ a {
     justify-content: center;
     height: 180px;
     padding: 10px;
-    background: #f0f0f0;
+    background: #ecedf2;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }

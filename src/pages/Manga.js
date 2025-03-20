@@ -2,6 +2,9 @@
 import React from "react";
 import "../components/ProductCard.css";
 import BookCard from "../components/BookCard";
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 // Import images
 import book1 from "../images/manga1.jpg";
@@ -23,9 +26,6 @@ import book16 from "../images/manga16.jpg";
 import book17 from "../images/manga17.jpg";
 import book18 from "../images/manga18.jpg";
 import book19 from "../images/manga19.jpg";
-import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
-
 
 const mangaList = [
   {
@@ -212,15 +212,31 @@ const mangaList = [
 
 
 const Manga = () => {
-  const { addToCart } = useContext(CartContext);
+  const { addToCart: addProductToCart } = useContext(CartContext);
+  const navigate = useNavigate();
+
+  const handleAddToCart = (book) => {
+    const token = localStorage.getItem("token");
+  
+    console.log("Token from localStorage:", token);
+  
+    if (!token) {
+      alert("Please login to add items to your cart.");
+      navigate("/login");
+      return;
+    }
+  
+    addProductToCart(book);
+  };
 
   return (
     <div className="books-container">
       {mangaList.map((book) => (
-        <BookCard key={book.id} book={book} addToCart={addToCart} />
+        <BookCard key={book.id} book={book} addToCart={handleAddToCart} />
       ))}
     </div>
   );
 };
+
 export default Manga;
 export { mangaList };

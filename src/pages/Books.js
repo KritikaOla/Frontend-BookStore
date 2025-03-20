@@ -3,6 +3,8 @@ import "../components/ProductCard.css";
 import BookCard from "../components/BookCard";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import { useNavigate } from "react-router-dom"; // Add this import!
+import { useEffect } from "react";
 
 
 // Import images
@@ -249,17 +251,36 @@ const booksList = [
     badge: "30% off",
   },
 ];
-const Books = () => {
-  const { addToCart } = useContext(CartContext);
 
+
+const Books = () => {
+  const { addToCart: addProductToCart } = useContext(CartContext);
+  const navigate = useNavigate(); // Hook for redirection
+
+  // Enhanced Add to Cart handler with auth check
+  const handleAddToCart = (book) => {
+    const token = localStorage.getItem("token");
+  
+    console.log("Token from localStorage:", token);
+  
+    if (!token) {
+      alert("Please login to add items to your cart.");
+      navigate("/login");
+      return;
+    }
+  
+    addProductToCart(book);
+  };
+  
   return (
     <div className="books-container">
       {booksList.map((book) => (
-        <BookCard key={book.id} book={book} addToCart={addToCart} />
+        <BookCard key={book.id} book={book} addToCart={handleAddToCart} />
       ))}
     </div>
   );
 };
+
 
 export default Books;
 export { booksList };

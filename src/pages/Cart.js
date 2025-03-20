@@ -92,12 +92,12 @@ const Cart = () => {
                 <div className="card-body d-flex justify-content-between align-items-center">
                   <h4>Total: ₹{totalAmount.toFixed(2)}</h4>
                   <button
-                    type="button"
-                    className="btn btn-warning btn-lg"
-                    onClick={() => navigate('/payment', { state: { totalAmount } })}
-                  >
-                    Proceed to Pay
-                  </button>
+                       type="button"
+                            className="btn btn-warning btn-lg"
+                            onClick={() => navigate('/payment', { state: { totalAmount, cartItems } })} // ✅ Pass cartItems
+                              >
+                         Proceed to Pay
+                      </button>
                 </div>
               </div>
             )}
