@@ -1,10 +1,10 @@
 
 import React, { createContext, useState } from "react";
 
-// Create the context
+// Creates the context
 export const CartContext = createContext();
 
-// Create the provider component
+// Created the provider component
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
 
@@ -25,7 +25,7 @@ export const CartProvider = ({ children }) => {
     setCartItems([]);
   };
 
-  // Provide the cart state and functions to all child components
+  // Provided the cart state and functions to all child components
   return (
     <CartContext.Provider
       value={{
