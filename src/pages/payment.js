@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'; // ✅ Added useEffect
+import React, { useState, useEffect } from 'react'; // Added useEffect
 import { useLocation } from 'react-router-dom';
 import './payment.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
-import axios from 'axios'; // ✅ Import axios
+import axios from 'axios'; // Import axios
 
 const Payment = () => {
   const [activeTab, setActiveTab] = useState('menu2');
@@ -13,11 +13,11 @@ const Payment = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userEmail, setUserEmail] = useState('');
   const [paymentMessage, setPaymentMessage] = useState('');
-  const [isLoading, setIsLoading] = useState(false); // ✅ Loading state
+  const [isLoading, setIsLoading] = useState(false); //  Loading state
 
   const location = useLocation();
   const totalAmount = location.state?.totalAmount || 0;
-  const cartItems = location.state?.cartItems || []; // ✅ Get cart items from location state
+  const cartItems = location.state?.cartItems || []; //  Get cart items from location state
 
   const toggleSidebar = () => {
     setSidebarToggled(!sidebarToggled);
@@ -27,7 +27,7 @@ const Payment = () => {
     setActiveTab(tabId);
   };
 
-  // ✅ Check login and get email on component mount
+  //  Check login and get email on component mount
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
@@ -59,9 +59,9 @@ const Payment = () => {
       const purchaseData = cartItems.map((item) => ({
         Email: userEmail,
         BookName: item.title,
-        Cost: parseFloat(item.price), // 🔥 Ensure it's a number
+        Cost: parseFloat(item.price), //  Ensure it's a number
         Quantity: item.quantity || 1,
-        DateOfPurchase: new Date().toISOString(), // 🔥 Match C# DateTime format
+        DateOfPurchase: new Date().toISOString(), //  Match C# DateTime format
       }));
   
       const token = localStorage.getItem('token');
@@ -258,7 +258,7 @@ const Payment = () => {
                     </div>
                   )}
 
-                  {/* ✅ Payment Status Message */}
+                  {/*  Payment Status Message */}
                   {paymentMessage && (
                     <div className="alert alert-info mt-3 text-center">
                       {paymentMessage}
