@@ -15,7 +15,7 @@ const ProductCard = ({ book, onAddToCart }) => {
         <div className="product-bottom-details">
           <button
             className="view-more-btn"
-            onClick={() => onAddToCart(book)} // 👉 passes the book when clicked
+            onClick={() => onAddToCart(book)} //  passes the book when clicked
           >
             View More
           </button>
