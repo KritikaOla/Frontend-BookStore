@@ -12,7 +12,7 @@ h1 {
 /* Force reset font styles across the app */
 body, html, * {
   font-family: ' sans-serif' !important;
-  font-size: 16px !important; /* Adjust this as needed */
-  font-weight: normal !important; /* Optional */
+  font-size: 16px !important; 
+  font-weight: normal !important;
 }
 
