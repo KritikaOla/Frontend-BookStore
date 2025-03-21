@@ -1,3 +1,5 @@
+//Created this page for result of search bar in header
+//returns searched books
 import React from "react";
 import { useLocation } from "react-router-dom";
 import BookCard from "../components/BookCard";
