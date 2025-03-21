@@ -28,7 +28,7 @@ export default function Login() {
     }
 
     const payload = {
-      email: formData.email, // ✅ Fixed: backend expects "email"
+      email: formData.email, //backend expects "email"
       password: formData.password,
     };
 
