@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 
-// Import images (Ensure the paths are correct)
+// Import images 
 import ratanTataImg from "../images/ratan-bio.jpg";
 import onePieceImg from "../images/one-piece.jpg";
 import richDadImg from "../images/rich-poor.webp";
