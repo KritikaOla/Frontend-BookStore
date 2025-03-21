@@ -3,7 +3,7 @@ import "../components/ProductCard.css";
 import BookCard from "../components/BookCard";
 import { useContext } from "react";
 import { CartContext } from "../Store/CartContext";
-import { useNavigate } from "react-router-dom"; // Add this import!
+import { useNavigate } from "react-router-dom"; 
 import { useEffect } from "react";
 
 
